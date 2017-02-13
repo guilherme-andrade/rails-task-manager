@@ -13,3 +13,31 @@
  *= require_tree .
  *= require_self
  */
+@import ('components/tabs.scss');
+
+body {
+  margin: 0;
+  font-family: Open-sans, sans-serif;
+}
+h1, h2, h3 {
+  font-family: Raleway, Helvetica, sans-serif;
+}
+
+.header-wrapper {
+  background: #53443F;
+}
+.header-container img {
+  width: 100px;
+  border-radius: 50%;
+}
+.header-container h1 {
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: -1px;
+}
+
+.header-infos {
+  padding: 20px 0;
+}
+

@@ -6,9 +6,22 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
   </head>
 
   <body>
+  <div class="header-wrapper">
+    <div class="container header-container text-center">
+      <h1>Task Manager</h1>
+    </div>
+    <div class="tabs">
+      <a href="/tasks" class="tab active"><h3>Show All</h3></a>
+      <a href="/tasks/new" class="tab"><h3>Create New</h3></a>
+      <a href="/tasks/:id/edit" class="tab"><h3>Edit</h3></a>
+    </div>
+  </div>
+
     <%= yield %>
   </body>
 </html>
