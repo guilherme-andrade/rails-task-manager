@@ -13,7 +13,8 @@
  *= require_tree .
  *= require_self
  */
-@import ('components/tabs.scss');
+@import 'components/tabs.scss';
+@import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css';
 
 body {
   margin: 0;
@@ -24,7 +25,7 @@ h1, h2, h3 {
 }
 
 .header-wrapper {
-  background: #53443F;
+  background: black;
 }
 .header-container img {
   width: 100px;
@@ -39,5 +40,9 @@ h1, h2, h3 {
 
 .header-infos {
   padding: 20px 0;
+}
+
+.tab-content {
+  padding: 100px;
 }
 

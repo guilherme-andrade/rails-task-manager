@@ -1,0 +1,24 @@
+<%= form_for(@task) do |f| %>
+  <%= f.label :Author %>
+  <br>
+  <%= f.text_field :created_by, :placeholder => 'Enter your name here' %>
+  <br><br>
+  <%= f.label :Title %>
+  <br>
+  <%= f.text_field :title, :placeholder => 'Enter your task name here' %>
+  <br><br>
+  <%= f.label :description %>
+  <br>
+  <%= f.text_area :description, size: '80*50', :placeholder => 'Enter your task description here' %>
+  <br><br>
+  <%= f.label :priority_level %>
+  <br>
+  <%= f.select :priority, [5, 4, 3, 2, 1] %>
+  <br> <br>
+  <%= f.label :Completed %>
+  <br>
+  <%= f.check_box :completed %>
+  <br> <br>
+  <%= f.submit 'Submit', :class => 'btn btn-danger' %>
+<% end %>
+

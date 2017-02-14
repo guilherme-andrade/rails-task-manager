@@ -1,3 +1,92 @@
 // Place all the styles related to the Tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.tasks {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-radius: 3px;
+  transition: all 0.15s ease;
+  margin: 10px 0;
+}
+
+/* Body design */
+.tasks-body {
+  flex: 1 1 auto;
+  padding-left: 25px;
+}
+.tasks-body h3 {
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 10px;
+}
+.tasks-body p {
+  font-weight: lighter;
+  color: #999999;
+  margin-bottom: 0;
+}
+
+
+/* Upvote design */
+.tasks-days-elapsed {
+  padding-right: 25px;
+  text-align: center;
+  transition: all 0.15s ease;
+  font-weight: bold;
+  font-size: 20px;
+}
+.tasks-days-elapsed a{
+  color: black;
+}
+
+.tasks-days-elapsed a:hover{
+  text-decoration: none !important;
+  color: #D3473C !important;
+}
+.tasks-count {
+  margin: 2px 0 0;
+}
+.tasks-arrow {
+  transition: all 0.15s ease;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid transparent;
+  border-bottom: 9px solid black;
+  border-radius: 2px;
+  margin: auto;
+}
+
+/* Controls design */
+.tasks-controls {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 0px;
+}
+.tasks-controls a {
+  padding: 0 20px;
+  font-size: 17px;
+  color: #E6E6E6;
+}
+.tasks-controls a:hover {
+  color: #D3473C !important;
+  text-decoration: none;
+}
+.tasks-controls-hidden a {
+  color: transparent;
+  font-size: 15px;
+  transition: all 0.15s ease;
+  border-color: transparent;
+}
+
+/* Hover effects */
+.tasks:hover {
+  background: #f7f7fa;
+  cursor: pointer;
+}
+
+.tasks:hover .tasks-days-elapsed { transform: scale(1.05) }
+.tasks:hover .tasks-controls-hidden a { color: #E6E6E6 }
+.tasks-days-elapsed:hover .tasks-arrow { border-bottom: 9px solid #5898f1 }

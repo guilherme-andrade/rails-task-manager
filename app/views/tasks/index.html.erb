@@ -1,2 +1,18 @@
-<h1>Tasks#index</h1>
-<p>Find me in app/views/tasks/index.html.erb</p>
+<div class="container">
+<% @tasks.each do |task| %>
+<div class="tasks">
+  <div class="tasks-days-elapsed">
+  <% link_text = "#{task.id}  -  #{task.title}" %>
+  <%= link_to link_text, task_path(task.id), class: 'tasks-days-elapsed' %></div>
+  <div class="tasks-body">
+    <div class="tasks-created-by"><strong>Created by:  </strong><%= task.created_by %></div>
+    <div class="tasks-updated-by"><strong>Last updated on:  </strong> <%= task.updated_at %></div>
+  </div>
+  <ul class="list-inline tasks-controls">
+    <li><%= link_to '', edit_task_path(task.id), class: 'fa fa-pencil' %></li>
+    <li><%= link_to '', task_path(task.id), class: 'fa fa-trash', method: :delete %></li>
+  </ul>
+</div>
+<% end %>
+</div>
+

@@ -7,21 +7,25 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
   </head>
+<body>
+    <div class="header-wrapper">
+      <div class="container header-container text-center">
+        <h1>Task Manager</h1>
+      </div>
 
-  <body>
-  <div class="header-wrapper">
-    <div class="container header-container text-center">
-      <h1>Task Manager</h1>
+      <div class="tabs">
+        <a href="/tasks" class="tab <%= request.env['PATH_INFO'] == tasks_path ? 'active' : '' %>"> <h3>Show All</h3></a>
+        <a href="/tasks/new" class="tab <%= request.env['PATH_INFO'] == new_task_path ? 'active' : '' %>"><h3>Create New</h3></a>
+      </div>
     </div>
-    <div class="tabs">
-      <a href="/tasks" class="tab active"><h3>Show All</h3></a>
-      <a href="/tasks/new" class="tab"><h3>Create New</h3></a>
-      <a href="/tasks/:id/edit" class="tab"><h3>Edit</h3></a>
-    </div>
-  </div>
 
-    <%= yield %>
+
+    <div class="tab-content">
+        <%= yield %>
+    </div>
+
+
   </body>
-</html>
